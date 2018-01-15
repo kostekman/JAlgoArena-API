@@ -1,6 +1,7 @@
 language: Java
 jdk:
 - oraclejdk8
+sudo: required
 before_cache:
 - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
@@ -10,12 +11,10 @@ cache:
 before_deploy:
 - ./gradlew releaseZip
 deploy:
-  provider: releases
-  api_key:
-    secure: "e8b086d1-b5ca-4504-8baf-7f55a085b37d"
-  file_glob: true
-  file: "./build/libs/JAlgoArena-API-*.zip"
-  skip_cleanup: true
+  provider: heroku
+  api_key: "e8b086d1-b5ca-4504-8baf-7f55a085b37d"
+  app: jalgoarena-api-koscinsa
   on:
     repo: kostekman/JAlgoArena-API
-    tags: true
+    tags: false
+
