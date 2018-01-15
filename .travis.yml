@@ -17,5 +17,5 @@ deploy:
   file: "./build/libs/JAlgoArena-API-*.zip"
   skip_cleanup: true
   on:
-    repo: spolnik/JAlgoArena-API
+    repo: kostekman/JAlgoArena-API
     tags: true
