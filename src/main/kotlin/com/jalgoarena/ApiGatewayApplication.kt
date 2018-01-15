@@ -48,8 +48,13 @@ open class JAlgoArenaApiGatewayApplication {
         })
         return CorsFilter(source)
     }
+
+    companion object {
+        @JvmStatic fun main(args: Array<String>) {
+            SpringApplication.run(JAlgoArenaApiGatewayApplication::class.java, *args)
+        }
+    }
+
 }
 
-fun main(args: Array<String>) {
-    SpringApplication.run(JAlgoArenaApiGatewayApplication::class.java, *args)
-}
+
