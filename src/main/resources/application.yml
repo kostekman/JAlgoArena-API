@@ -12,7 +12,7 @@ zuul:
 eureka:
   client:
     serviceUrl:
-      defaultZone: https://jalgoarena-eureka-koscinsa.herokuapp.com/eureka/
+      defaultZone: ${EUREKA_URL:https://jalgoarena-eureka-koscinsa.herokuapp.com/eureka/}
 hystrix:
   command:
     default:

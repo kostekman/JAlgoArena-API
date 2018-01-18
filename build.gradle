@@ -28,6 +28,7 @@ mainClassName = 'com.jalgoarena.JAlgoArenaApiGatewayApplication'
 
 distDocker {
     exposePort 5001
+    push = true
 }
 
 repositories {
